@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #90e0ef;
+    --secondary-color: #00b4d8;
+    --tertiary-color: #0077b6;
+    --gray-color: #b0b0b0;
+    --light-color: #f0f0f0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 75px;
+    margin: 10px 0;
+    width: 800px;
+    max-width: 95%;
+    box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+}
+
+.box img {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.box form {
+    background-color: var(--light-color);
+    border-radius: 150px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box form i {
+    padding: 10px;
+    color: var(--gray-color);
+}
+
+.box form:hover i {
+    color: var(--secondary-color);
+}
+
+.box form input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 0px 5px;
+}
+
+.box form input[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 150px;
+    padding: 15px;
+    font-weight: 700;
+    border: none;
+}
+
+.box form input[type="submit"]:hover {
+    background-color: var(--tertiary-color);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 75px 25px;
+    }
+    .box img {
+        width: 65%;
+    }
+    .box form {
+        padding: 5px;
+    }
+    .box form i {
+        font-size: 10px;
+    }
+    .box form input[type="search"] {
+        padding: 0;
+    }
+    .box form input::placeholder {
+        font-size: 10px;
+    }
+    .box form input[type="submit"] {
+        font-size: 10px;
+        padding: 9px;
+    }
+}
